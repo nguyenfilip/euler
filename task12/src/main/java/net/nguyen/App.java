@@ -1,21 +1,43 @@
 package net.nguyen;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Hello world!
  * 
  */
 public class App {
 	public static void main(String[] args) {
-		for (int a = 1; a < 1000; a++)
-			for (int b = a + 1; b < 1000; b++)
-				for (int c = b + 1; c < 1000; c++) {
-					if (a + b + c == 1000)
-						if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2))
-							System.out.println(String.format("%d %d %d = %d",
-									a, b, c, a * b * c));
+		int i = 1;
+		while (getDivisors(getTriangular(i))<=500){
+			i++;
+		}
+		System.out.println(getDivisors(getTriangular(i)));
+		System.out.println(getTriangular(i));
+	}
 
-				}
+	private static int getTriangular(int x) {
+		int res= 0;
+		for (int i = x; i>0;i--)
+			res+=i;
+		
+		return res;
+	}
 
+	private static int getDivisors(int x) {
+		
+		int divisors = 0;
+		for (int i = 1;i<=Math.sqrt(x);i++){
+			if (x%i==0) {
+				divisors++;
+				if (i*i != x)
+					divisors++;
+			}
+				
+		}
+		
+		return divisors;
 	}
 
 }
