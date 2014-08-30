@@ -10,9 +10,11 @@ import java.util.Set;
  */
 public class App {
 	public static void main(String[] args) {
-		 PowerOfTwo pot = new PowerOfTwo(10000);
-		 pot.pow(1000);
-		 System.out.println(pot.sum());
+		int result = 0;
+		for (int i = 1; i <=1000;i++)
+			result += new WordNumber(i).getWordLength();
+		System.out.println(result);
+		
 	}
 	
 
