@@ -16,16 +16,20 @@ public class IntegerNumber {
 	public IntegerNumber(int i){
 		if (i<0 || i > 9)
 			throw new IllegalArgumentException("Only one digit number can be constructed");
-		num.add(i);
+		addDigitsToFront(i);
 	}
 	
+	public IntegerNumber() {
+		
+	}
+
 	public int getLen(){
 		return num.size();
 	}
 	
 	public int getNumFromBack(int i){
-		if (i < 1)
-			throw new IllegalArgumentException("The position to be returned must be higher than 1");
+		if (i < 0)
+			throw new IllegalArgumentException("The position to be returned must be higher than 0");
 		
 		if (num.size()-1<i)
 			return 0;
@@ -34,7 +38,7 @@ public class IntegerNumber {
 	}
 	
 	public void addDigitsToFront(int i){
-		if (i<1 || i > 99)
+		if (i<0 || i > 99)
 			throw new IllegalArgumentException("Digit to be added must be bigger than 0 and lower then 100");
 		
 		 if (i > 9){
