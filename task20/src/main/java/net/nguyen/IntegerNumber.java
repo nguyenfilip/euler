@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import com.beust.jcommander.internal.Lists;
+import java.util.stream.Stream;
 
 /**
  * Integer number starting with 
  */
 public class IntegerNumber {
-	private List<Integer> num = new ArrayList<Integer>();
+	private List<Integer> num = new ArrayList<>();
 	
 	public IntegerNumber(int i){
 		if (i<0 || i > 9)
@@ -25,6 +24,10 @@ public class IntegerNumber {
 
 	public int getLen(){
 		return num.size();
+	}
+	
+	public Stream<Integer> getStream(){
+		return num.stream();
 	}
 	
 	public int getNumFromBack(int i){

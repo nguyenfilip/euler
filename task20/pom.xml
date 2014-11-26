@@ -10,4 +10,11 @@
   <artifactId>task20</artifactId>
   <name>task20</name>
 
+ <dependencies>
+ <dependency>
+    <groupId>com.codepoetics</groupId>
+    <artifactId>protonpack</artifactId>
+    <version>1.0</version>
+</dependency>
+ </dependencies>
 </project>
