@@ -29,7 +29,10 @@
 <module>task19</module>
 <module>task20</module>
 <module>task21</module>
+<module>task22</module>
 <module>task23</module>
+
+
   </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
