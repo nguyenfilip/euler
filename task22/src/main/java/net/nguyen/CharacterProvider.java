@@ -4,4 +4,5 @@ public interface CharacterProvider {
 
 	Character read();
 
+
 }

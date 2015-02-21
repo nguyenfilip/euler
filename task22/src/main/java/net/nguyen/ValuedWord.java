@@ -14,8 +14,15 @@ public class ValuedWord implements Comparable<ValuedWord>{
 	public int getChachedValue(){
 		return cachedValue;
 	}
-	
-
+		
+	public static ValuedWord fromString(String string) {
+		ValuedWord vv = new ValuedWord();
+		
+		for (Character c : string.toCharArray())
+			vv.addChar(c);
+		
+		return vv;
+	}
 	
 	@Override
 	public int hashCode() {
@@ -43,4 +50,6 @@ public class ValuedWord implements Comparable<ValuedWord>{
 	public String toString() {
 		return word.toString();
 	}
+
+	
 }
